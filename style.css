@@ -1,0 +1,260 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');*/
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Satisfy', cursive;
+}
+
+body{
+    overflow: hidden;
+}
+
+section{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    background:#000;
+}
+
+
+section .box{
+    position:absolute;
+    width:450px;
+    height:450px;
+    background-image: url(img/Shahjahan.png);
+    border-radius: 20px;
+}
+
+section .box::before{
+    content:" ";
+    position:absolute;
+    top:50%;
+    left:0;
+    width:100%;
+    height:100%;
+    background:linear-gradient(to top,#fff,transparent);
+    opacity:0.1;
+    transform:rotate(180deg);
+    transform-origin: top;
+
+    -wibkit-tranform:rorate(180deg);
+    -moz-tranform:rorate(180deg);
+    -ms-tranform:rorate(180deg);
+    -o-tranform:rorate(180deg);
+
+}
+
+
+section .box .circle{
+    position:relative;
+    width:100%;
+    height:100%;
+    background:linear-gradient(135deg,#b9595946,rgba(158, 52, 52, 0.397));
+    box-shadow:0 0 10px #fff,0 0 40px rgb(88, 8, 8),0 0 80px rgba(8, 184, 46, 0.966);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    animation: shopon 15s linear infinite;
+}
+
+@keyframes shopon{
+    0%{
+        transform: translateY(0%);
+        -wibkit-transform:translateY(0%);
+        -moz-transform:translateY(0%);
+        -ms-transform:translateY(0%);
+        -o-transform:translateY(0%);
+    }
+    25%{
+        transform: translateY(25%);
+        -wibkit-transform:translateY(25%);
+        -moz-transform:translateY(25%);
+        -ms-transform:translateY(25%);
+        -o-transform:translateY(25%);
+    }
+    50%{
+        transform: translateY(50%);
+        -wibkit-transform:translateY(50%);
+        -moz-transform:translateY(50%);
+        -ms-transform:translateY(50%);
+        -o-transform:translateY(50%);
+    }
+    
+    75%{
+        transform: translateY(75%);
+        -wibkit-transform:translateY(0%);
+        -moz-transform:translateY(0%);
+        -ms-transform:translateY(0%);
+        -o-transform:translateY(0%);
+    }
+   100%{
+        transform: translateY(0%);
+        -wibkit-transform:translateY(0%);
+        -moz-transform:translateY(0%);
+        -ms-transform:translateY(0%);
+        -o-transform:translateY(0%);
+    }
+}
+section .box .circle h2{
+    position:absolute;
+    font-size: 4rem;
+    color:#fff;
+    text-align: center;
+}
+
+section i{
+    position: absolute;
+    background:#ffffff;
+    border-radius:100%;
+    animation: animate linear infinite;
+    clip-path: polygon(30% 0%, 48% 44%, 100% 31%, 51% 53%, 70% 100%, 43% 59%, 0% 70%, 39% 50%);
+    -wibkit-border-radius:100%;
+    -moz-border-radius:100%;
+    -ms-border-radius:100%;
+    -o-border-radius:100%;
+    -webkit-animation:animate linear infinite;
+}
+
+@keyframes animate{
+    0%{transform: translateY(0);
+       opacity:0;
+       -wibkit-transform:translateY(0); 
+       -moz-transform:translateY(0); 
+       -ms-transform:translateY(0); 
+       -o-transform:translateY(0); 
+    }
+    10%{opacity: 1;}
+    90%{opacity: 1;}
+    100%{transform: translateY(-2000);
+       opacity:0;
+       -wibkit-transform:translateY(-2000); 
+       -moz-transform:translateY(-2000); 
+       -ms-transform:translateY(-2000); 
+       -o-transform:translateY(-2000);}
+    
+}
+
+
+
+/*css new*/
+
+
+ul
+{
+    position:absolute;
+    margin:0;
+    padding:0;
+    width:100px;
+    animation:rotate 5s linear infinite;
+}
+
+ul.cr1
+{
+    top:20%;
+    left:20%
+}
+
+ul.cr2
+{
+    top:20%;
+    right:20%
+}
+
+ul.cr3
+{
+    top:70%;
+    right:20%
+}
+
+ul.cr4
+{
+    top:70%;
+    left:20%
+}
+
+ul.cr5
+{
+    top:30%;
+    left:38%
+}
+
+ul li 
+{
+    position:absolute;
+    width:100px;
+    height:2px;
+    background:#fff;
+    list-style: none;
+}
+
+ul li:nth-child(1)
+{
+    transform:rotate(0deg);
+}
+
+ul li:nth-child(2)
+{
+    transform:rotate(90deg);
+}
+
+ul li:nth-child(3)
+{
+    transform:rotate(45deg);
+}
+
+ul li:nth-child(4)
+{
+    transform:rotate(-45deg);
+}
+
+ul li:nth-child(5)
+{
+    transform:rotate(-90deg);
+}
+
+ul li:before
+{
+    content:'';
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:#003444;
+    transform: scaleX(.5);
+    animation:animate 1s linear infinite;
+}
+
+
+
+@keyframes rotate
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animate
+{
+    0%
+    {
+        transform:scaleX(.5);
+    }
+    50%
+    {
+        transform:scaleX(1);
+    }
+    100%
+    {
+        transform:scaleX(.5);
+    }
+}
